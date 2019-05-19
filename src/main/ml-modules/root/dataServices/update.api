@@ -1,0 +1,17 @@
+{
+	"functionName": "update",
+	"params": [
+		{
+			"name": "name",
+			"datatype": "string"
+		},
+		{
+			"name": "declaration",
+			"datatype": "jsonDocument"
+		}
+	],
+	"return": {
+		"datatype": "jsonDocument",
+		"$javaClass": "com.fasterxml.jackson.databind.JsonNode"
+	}
+}

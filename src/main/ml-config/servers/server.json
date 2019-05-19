@@ -4,7 +4,7 @@
 	"server-type": "http",
 	"enabled": true,
 	"root": "/",
-	"port": 9000,
+	"port": 8010,
 	"authentication":"digest",
 	"content-database": "data-services-example-modules",
 	"modules-database": "%%MODULES_DATABASE%%"

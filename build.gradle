@@ -7,9 +7,9 @@ plugins {
 
 apply plugin : 'eclipse'
 
-task generateHelloWorld(type: com.marklogic.client.tools.gradle.EndpointProxiesGenTask) {
-	description = "This task is used to generate the src/main/java/com/acme/HelloWorld.java class"
-	serviceDeclarationFile = 'src/main/ml-modules/root/helloWorld/service.json'
+task scaffoldDataServices(type: com.marklogic.client.tools.gradle.EndpointProxiesGenTask) {
+	description = "Build data-services-manager"
+	serviceDeclarationFile = 'src/main/ml-modules/root/dataServices/service.json'
 }
 
 repositories {
