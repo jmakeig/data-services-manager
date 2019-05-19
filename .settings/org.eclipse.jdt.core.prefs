@@ -1,0 +1,8 @@
+#
+#Sun May 19 10:28:33 PDT 2019
+org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=12
+org.eclipse.jdt.core.compiler.source=12
+eclipse.preferences.version=1
+org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
+org.eclipse.jdt.core.compiler.compliance=12

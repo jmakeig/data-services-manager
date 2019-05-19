@@ -1,0 +1,9 @@
+{
+	"functionName": "list",
+	"params": [],
+	"return": {
+		"datatype": "jsonDocument",
+		"$javaClass": "com.fasterxml.jackson.databind.JsonNode",
+		"multiple": true
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"server-name": "%%NAME%%",
+	"group-name": "Default",
+	"server-type": "http",
+	"enabled": true,
+	"root": "/",
+	"port": 9000,
+	"authentication":"digest",
+	"content-database": "data-services-example-modules",
+	"modules-database": "%%MODULES_DATABASE%%"
+}

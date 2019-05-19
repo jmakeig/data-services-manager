@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="bin/main" path="src/main/java">
+		<attributes>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="bin/main" path="src/main/resources">
+		<attributes>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="bin/test" path="src/test/java">
+		<attributes>
+			<attribute name="gradle_scope" value="test"/>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="bin/test" path="src/test/resources">
+		<attributes>
+			<attribute name="gradle_scope" value="test"/>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.marklogic/marklogic-client-api/4.2.0/1a2fff1293de44f3923996a0ef3acc4b7f22842d/marklogic-client-api-4.2.0.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.marklogic/marklogic-client-api/4.2.0/b751d06140c5f7af5fcf73235c6f9be4681e9fdf/marklogic-client-api-4.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.25/da76ca59f6a57ee3102f8f9bd9cee742973efa8a/slf4j-api-1.7.25.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.25/962153db4a9ea71b79d047dfd1b2a0d80d8f4739/slf4j-api-1.7.25-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.10.0/55f574ec622f65ac9c0e2e922d3ffa01dc4f139e/logging-interceptor-3.10.0.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.10.0/255a9237ac6ac8ba15bb85006348d3fb0009a866/logging-interceptor-3.10.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.burgstaller/okhttp-digest/1.16/b9cd00bc0783746cb598ceec5b0af711a0a8ec9a/okhttp-digest-1.16.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.burgstaller/okhttp-digest/1.16/7f1fe200056ffd848f856c0c351afe020682e1b4/okhttp-digest-1.16-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.10.0/7ef0f1d95bf4c0b3ba30bbae25e0e562b05cf75e/okhttp-3.10.0.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.10.0/e99b7b608968f16b07104b93e62cb90701174d0/okhttp-3.10.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.sun.mail/javax.mail/1.6.1/757ba4630692bb2a1ec2d9d57a616b63f15e947e/javax.mail-1.6.1.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.sun.mail/javax.mail/1.6.1/ce7825b8dafa3660bbb6d4b33f4f91fc1e93fe38/javax.mail-1.6.1-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.1/426a0862406536e690c7caa8bb6ed32191986fac/javax.ws.rs-api-2.1.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.1/b693d737250f57da3bbc0fbfccf6917de18ae200/javax.ws.rs-api-2.1-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-csv/2.9.8/c890c340b81b2ec6c5a7118b113c91fffc952f89/jackson-dataformat-csv-2.9.8.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-csv/2.9.8/b08264d4399bed5e981b2cceb0d3ba8b439d3941/jackson-dataformat-csv-2.9.8-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.9.8/11283f21cc480aa86c4df7a0a3243ec508372ed2/jackson-databind-2.9.8.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.9.8/f66792d499a6fea6c7a743558f940e0ebf775ce3/jackson-databind-2.9.8-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.9.8/f5a654e4675769c716e5b387830d19b501ca191/jackson-core-2.9.8.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.9.8/ecaea301e166a0b48f11615864246de739b6619b/jackson-core-2.9.8-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.9.8/ba7f0e6f8f1b28d251eeff2a5604bed34c53ff35/jackson-annotations-2.9.8.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.9.8/78430356aa8c7a1227f97c544e6248630a47a17a/jackson-annotations-2.9.8-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.14.0/102d7be47241d781ef95f1581d414b0943053130/okio-1.14.0.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.14.0/e7c96b4fe5651490d8f3c022042940d743a3bdd9/okio-1.14.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/javax.activation/activation/1.1/e6cb541461c2834bdea3eb920f1884d1eb508b50/activation-1.1.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/javax.activation/activation/1.1/3697e9f67a2ed7ac5f589cff30f21173299440/activation-1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.4.1/3eab6007a6c1099f596ac7dee4bb738105988b8f/junit-jupiter-api-5.4.1.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.4.1/f4cf9cd39e4ca54b2a88402de1acc11ca1498650/junit-jupiter-api-5.4.1-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.4.1/45eb68b27ebf61f923a2aa180add7fb68b09b1b1/junit-platform-commons-1.4.1.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.4.1/fb62e18caf6a7a78547930020e6eb4315f550438/junit-platform-commons-1.4.1-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.0.0/3ef5276905e36f4d8055fe3cb0bdcc7503ffc85d/apiguardian-api-1.0.0.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.0.0/777508fa9f3e03cafb3c1fb2eba3dca317f4b1ee/apiguardian-api-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.1.1/efd9f971e91074491ea55b19f67b13470cf4fcdd/opentest4j-1.1.1.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.1.1/88a3a2cb15c413565462cea99f201b67bc6d2f10/opentest4j-1.1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.1.8/e54f49a227611976642f81cf2106b81c1ece8bf5/logback-classic-1.1.8.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.1.8/b99f99fd806e4472bc520274f9191ffaf250827c/logback-classic-1.1.8-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.22/86ceac14535af5a42c8fb0d06d79b925dd3cb263/jcl-over-slf4j-1.7.22.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.22/b03a290ee39cf7c2eed57a73402ce25d9f76ff00/jcl-over-slf4j-1.7.22-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.4.1/a3a64c9c0f9657b554d78d2a9ad536595fcc8ab1/junit-jupiter-engine-5.4.1.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.4.1/a40b620a07542172d2e5a4515a525d81b46a250f/junit-jupiter-engine-5.4.1-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.4.1/3af088020922beb18e51cec0693fe959796dffad/junit-platform-engine-1.4.1.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.4.1/f18cc5b13af39852b804c8b284baf00bd860dd60/junit-platform-engine-1.4.1-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.1.8/b4d1c3dea91727faf8b3d19cf4b9b972d6c0b89/logback-core-1.1.8.jar" sourcepath="/Users/jmakeig/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.1.8/2ef0d29dc5c06c390f826a53c2fd137d4419e9a1/logback-core-1.1.8-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin/default"/>
+</classpath>
