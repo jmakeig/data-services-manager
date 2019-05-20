@@ -1,0 +1,18 @@
+{
+	"functionName": "apis",
+	"params": [
+		{
+			"name": "service",
+			"datatype": "string"
+		},
+		{
+			"name": "api",
+			"datatype": "string",
+			"nullable": true
+		}
+	],
+	"return": {
+		"datatype": "jsonDocument",
+		"multiple": true
+	}
+}

@@ -1,14 +1,16 @@
 package com.marklogic.community;
 
-import java.io.Reader;
-import java.util.stream.Stream;
-
-import com.marklogic.client.DatabaseClient;
-import com.marklogic.client.impl.BaseProxy;
-
 // IMPORTANT: Do not edit. This file is generated.
 
 import com.marklogic.client.io.Format;
+import com.marklogic.client.io.marker.AbstractWriteHandle;
+import java.util.stream.Stream;
+import java.io.Reader;
+
+
+import com.marklogic.client.DatabaseClient;
+
+import com.marklogic.client.impl.BaseProxy;
 
 /**
  * Provides a set of operations on the database server
@@ -46,10 +48,10 @@ public interface DataServicesManager {
 
 
             @Override
-            public Stream<com.fasterxml.jackson.databind.JsonNode> list() {
+            public Stream<com.fasterxml.jackson.databind.JsonNode> services() {
               return BaseProxy.JsonDocumentType.toJsonNode(
                 baseProxy
-                .request("list.sjs", BaseProxy.ParameterValuesKind.NONE)
+                .request("services.sjs", BaseProxy.ParameterValuesKind.NONE)
                 .withSession()
                 .withParams(
                     )
@@ -75,15 +77,16 @@ public interface DataServicesManager {
 
 
             @Override
-            public com.fasterxml.jackson.databind.JsonNode get(String name) {
-              return BaseProxy.JsonDocumentType.toJsonNode(
+            public Stream<Reader> apis(String service, String api) {
+              return BaseProxy.JsonDocumentType.toReader(
                 baseProxy
-                .request("get.sjs", BaseProxy.ParameterValuesKind.SINGLE_ATOMIC)
+                .request("apis.sjs", BaseProxy.ParameterValuesKind.MULTIPLE_ATOMICS)
                 .withSession()
                 .withParams(
-                    BaseProxy.atomicParam("name", false, BaseProxy.StringType.fromString(name)))
+                    BaseProxy.atomicParam("service", false, BaseProxy.StringType.fromString(service)),
+                    BaseProxy.atomicParam("api", true, BaseProxy.StringType.fromString(api)))
                 .withMethod("POST")
-                .responseSingle(false, Format.JSON)
+                .responseMultiple(false, Format.JSON)
                 );
             }
 
@@ -101,12 +104,12 @@ public interface DataServicesManager {
     com.fasterxml.jackson.databind.JsonNode delete(String name);
 
   /**
-   * Invokes the list operation on the database server
+   * Invokes the services operation on the database server
    *
    * 
    * @return	as output
    */
-    Stream<com.fasterxml.jackson.databind.JsonNode> list();
+    Stream<com.fasterxml.jackson.databind.JsonNode> services();
 
   /**
    * Invokes the update operation on the database server
@@ -118,11 +121,12 @@ public interface DataServicesManager {
     com.fasterxml.jackson.databind.JsonNode update(String name, Reader declaration);
 
   /**
-   * Invokes the get operation on the database server
+   * Invokes the apis operation on the database server
    *
-   * @param name	provides input
+   * @param service	provides input
+   * @param api	provides input
    * @return	as output
    */
-    com.fasterxml.jackson.databind.JsonNode get(String name);
+    Stream<Reader> apis(String service, String api);
 
 }
