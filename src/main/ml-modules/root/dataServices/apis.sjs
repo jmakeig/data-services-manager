@@ -1,7 +1,7 @@
 'use strict';
 
-var service = '/helloWorld'; // EXTERNAL
-var api;
+var service; // EXTERNAL
+var api;     // EXTERNAL
 
 /**
  * Ensures that a path-like string ends with a slash.
@@ -30,6 +30,7 @@ function listAPIs(serviceName) {
   // TODO: Implement api filter, rather than wildcard
   return Sequence.from(
     fn.doc(cts.uriMatch(String(service.root.endpointDirectory) + '*.api')),
+    // https://github.com/marklogic/java-client-api/issues/1104#issuecomment-494146548
     api => api.toObject()
   );
 }
