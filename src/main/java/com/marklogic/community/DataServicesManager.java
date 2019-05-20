@@ -1,16 +1,14 @@
 package com.marklogic.community;
 
+import java.io.Reader;
+import java.util.stream.Stream;
+
+import com.marklogic.client.DatabaseClient;
+import com.marklogic.client.impl.BaseProxy;
+
 // IMPORTANT: Do not edit. This file is generated.
 
 import com.marklogic.client.io.Format;
-import com.marklogic.client.io.marker.AbstractWriteHandle;
-import java.util.stream.Stream;
-import java.io.Reader;
-
-
-import com.marklogic.client.DatabaseClient;
-
-import com.marklogic.client.impl.BaseProxy;
 
 /**
  * Provides a set of operations on the database server
