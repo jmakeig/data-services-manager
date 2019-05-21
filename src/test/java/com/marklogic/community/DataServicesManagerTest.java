@@ -1,6 +1,8 @@
 package com.marklogic.community;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 import java.util.UUID;
@@ -20,19 +22,31 @@ public class DataServicesManagerTest {
 
 	@Test
 	void test() {
-		assertEquals(1,
-				manager.getAPIs("/helloWorld").collect(Collectors.toList()).size());
-		assertEquals("whatsUp", manager.getAPIs("/helloWorld")
-				.collect(Collectors.toList()).get(0).getFunctionName());
-	}
+		final String service = "/helloWorld";
 
-	@Test
-	void testCreateAPI() {
+		// Initial state
+		assertEquals(1, manager.getAPI(service).count());
+		assertEquals("whatsUp", manager.getAPI(service).collect(Collectors.toList())
+				.get(0).getFunctionName());
+
+		// Create
 		final String functionName = "random-" + UUID.randomUUID();
 		final API api = new API(functionName, List.of(new Param("p1", "string")),
 				new Typed("string"));
 
-		final API saved = manager.createAPI("/helloWorld", api);
+		final API saved = manager.createAPI(service, api);
 		assertEquals(functionName, saved.getFunctionName());
+
+		// Verify newly created
+		assertEquals(2, manager.getAPI(service).count());
+		assertTrue(manager.getAPI(service)
+				.anyMatch(item -> functionName.equals(item.getFunctionName())));
+
+		// Remove
+		manager.deleteAPI(service, api);
+		assertEquals(1, manager.getAPI(service).count());
+		assertFalse(manager.getAPI(service)
+				.anyMatch(item -> functionName.equals(item.getFunctionName())));
 	}
+
 }

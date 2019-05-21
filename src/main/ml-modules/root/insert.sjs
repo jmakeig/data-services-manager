@@ -289,13 +289,14 @@ function getDocumentOptions(uri) {
  * @param {Iterable<string>|string} uris - one or more uris
  * @return {undefined}
  */
-function $delete(uris) {
+function remove(uris) {
   if ('string' === typeof uris) uris = [uris];
   Array.from(uris).map(uri => xdmp.lockForUpdate(uri));
   for (const uri of uris) {
     // TODO: Tombstone?
     xdmp.documentDelete(uri);
   }
+  return uris;
 }
 
 module.exports = {
@@ -324,14 +325,14 @@ module.exports = {
         upsert(uri, node, options, updateMetadata),
       move: (sourceURI, targetURI, newOptions, updater) =>
         move(sourceURI, targetURI, newOptions, updater, updateMetadata),
-      delete: uris => $delete(uris, updateMetadata)
+      remove: uris => remove(uris, updateMetadata)
     };
   },
   insert,
   update,
   upsert,
   move,
-  delete: $delete,
+  remove,
   DocumentExistsError,
   DocumentNotExistsError,
   properties

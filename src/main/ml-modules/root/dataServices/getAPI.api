@@ -1,5 +1,5 @@
 {
-	"functionName": "listAPIs",
+	"functionName": "getAPI",
 	"params": [
 		{
 			"name": "service",

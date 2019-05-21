@@ -1,0 +1,17 @@
+{
+	"functionName": "deleteAPI",
+	"params": [
+		{
+			"name": "service",
+			"datatype": "string"
+		},
+		{
+			"name": "api",
+			"datatype": "string"
+		}
+	],
+	"return": {
+		"datatype": "string",
+		"multiple": true
+	}
+}
