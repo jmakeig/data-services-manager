@@ -3,18 +3,7 @@
 var service; // EXTERNAL
 var api;     // EXTERNAL
 
-/**
- * Ensures that a path-like string ends with a slash.
- *
- * @param {string} path
- * @param {string} [separator='/']
- * @returns {string}
- */
-function trailingSlash(path, separator = '/') {
-  if (!path || path.length < 1) return separator;
-  if (separator !== path[path.length - 1]) return path + separator;
-  return path;
-}
+const { trailingSlash } = require('../util.sjs');
 
 /**
  * Given the service identifier, return an Array of its APIs

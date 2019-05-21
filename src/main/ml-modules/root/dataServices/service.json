@@ -1,4 +1,4 @@
 {
   "endpointDirectory": "/dataServices/",
-  "$javaClass": "com.marklogic.community.DataServicesManager"
+  "$javaClass": "com.marklogic.community.DataServicesProxy"
 }

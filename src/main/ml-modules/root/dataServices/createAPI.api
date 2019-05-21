@@ -1,0 +1,18 @@
+{
+	"functionName": "createAPI",
+	"params": [
+		{
+			"name": "service",
+			"datatype": "string"
+		},
+		{
+			"name": "api",
+			"datatype": "jsonDocument",
+			"$javaClass": "com.fasterxml.jackson.databind.JsonNode"
+		}
+	],
+	"return": {
+		"datatype": "jsonDocument",
+		"$javaClass": "com.fasterxml.jackson.core.JsonParser"
+	}
+}
