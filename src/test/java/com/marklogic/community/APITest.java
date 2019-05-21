@@ -11,9 +11,9 @@ import org.junit.jupiter.api.Test;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.marklogic.community.dataservices.Api;
+import com.marklogic.community.dataservices.API;
 
-public class ApiTest {
+public class APITest {
 
 	@Test
 	void testResource() {
@@ -23,16 +23,17 @@ public class ApiTest {
 	}
 
 	@Test
-	void testObjectMapper() throws JsonParseException, JsonMappingException, IOException {
+	void testObjectMapper()
+			throws JsonParseException, JsonMappingException, IOException {
 		ObjectMapper mapper = new ObjectMapper();
 
 		ClassLoader classLoader = this.getClass().getClassLoader();
 		File file = new File(classLoader.getResource("apis.api").getFile());
 
-		Api api = mapper.readValue(file, Api.class);
+		final API api = mapper.readValue(file, API.class);
 		assertEquals("apis", api.getFunctionName());
 		assertEquals(2, api.getParams().size());
-		assertEquals("jsonDocument", api.getReturns().getDatatype());
-		assertEquals(true, api.getReturns().getMultiple());
+		assertEquals("jsonDocument", api.getReturn().getDatatype());
+		assertEquals(true, api.getReturn().getMultiple());
 	}
 }

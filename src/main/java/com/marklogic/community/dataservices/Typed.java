@@ -1,9 +1,31 @@
 package com.marklogic.community.dataservices;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
 public class Typed {
+
+	public Typed() {
+		super();
+	}
+
+	public Typed(final String datatype) {
+		this(datatype, null, null);
+	}
+
+	public Typed(final String datatype, final Boolean multiple,
+			final Boolean nullable) {
+		this();
+		this.datatype = datatype;
+		this.multiple = multiple;
+		this.nullable = nullable;
+	}
+
 	private String datatype;
-	private Boolean multiple;
-	private Boolean nullable;
+	@JsonInclude(Include.NON_NULL)
+	private Boolean multiple = false;
+	@JsonInclude(Include.NON_NULL)
+	private Boolean nullable = false;
 
 	public String getDatatype() {
 		return datatype;

@@ -1,5 +1,5 @@
 {
-	"functionName": "apis",
+	"functionName": "listAPIs",
 	"params": [
 		{
 			"name": "service",
@@ -13,6 +13,7 @@
 	],
 	"return": {
 		"datatype": "jsonDocument",
+		"$javaClass": "com.fasterxml.jackson.core.JsonParser",
 		"multiple": true
 	}
 }

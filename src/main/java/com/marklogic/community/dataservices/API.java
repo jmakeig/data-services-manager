@@ -4,19 +4,28 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Api {
+public class API {
+	public API() {
+		super();
+	}
 
-	private String datatype;
+	public API(final String functionName) {
+		this.functionName = functionName;
+	}
+
+	public API(String functionName, List<Param> params, Typed returns) {
+		super();
+		this.functionName = functionName;
+		this.params = params;
+		this.returns = returns;
+	}
+
 	private String functionName;
 
 	private List<Param> params;
 
 	@JsonProperty("return")
 	private Typed returns;
-
-	public String getDatatype() {
-		return datatype;
-	}
 
 	public String getFunctionName() {
 		return functionName;
@@ -26,12 +35,8 @@ public class Api {
 		return params;
 	}
 
-	public Typed getReturns() {
+	public Typed getReturn() {
 		return returns;
-	}
-
-	public void setDatatype(String datatype) {
-		this.datatype = datatype;
 	}
 
 	public void setFunctionName(String name) {
@@ -42,7 +47,7 @@ public class Api {
 		this.params = params;
 	}
 
-	public void setReturns(Typed returns) {
+	public void setReturn(Typed returns) {
 		this.returns = returns;
 	}
 
