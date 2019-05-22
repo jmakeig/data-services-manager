@@ -1,18 +1,15 @@
 {
-	"functionName": "getAPI",
+	"functionName": "listAPIs",
 	"params": [
 		{
 			"name": "service",
-			"datatype": "string"
-		},
-		{
-			"name": "api",
 			"datatype": "string"
 		}
 	],
 	"return": {
 		"datatype": "jsonDocument",
 		"$javaClass": "com.fasterxml.jackson.core.JsonParser",
-		"nullable": true
+		"nullable": true,
+		"multiple": true
 	}
 }

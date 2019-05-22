@@ -1,6 +1,7 @@
 package com.marklogic.community;
 
 import java.io.IOException;
+import java.util.Objects;
 import java.util.stream.Stream;
 
 import com.fasterxml.jackson.core.JsonParser;
@@ -9,17 +10,32 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.marklogic.client.DatabaseClient;
 import com.marklogic.community.dataservices.API;
 
-public class DataServicesManager {
+public class APIManagerImpl implements APIManager {
 	private DataServicesProxy proxy;
 	private ObjectMapper mapper;
 
-	public DataServicesManager(final DatabaseClient db) {
+	private String service;
+
+	public APIManagerImpl forService(final String service) {
+		this.service = Objects.requireNonNull(service);
+		this.mapper = new ObjectMapper();
+		return this;
+	}
+
+	@Override
+	public String getService() {
+		return this.service;
+	}
+
+	public APIManagerImpl(final DatabaseClient db) {
 		super();
 		this.proxy = DataServicesProxy.on(db);
-		this.mapper = new ObjectMapper();
 	}
 
 	private API fromJson(final JsonParser json) {
+		if (null == json) {
+			return null;
+		}
 		try {
 			return mapper.readValue(json, API.class);
 		} catch (IOException e) {
@@ -33,20 +49,24 @@ public class DataServicesManager {
 		return this.mapper.valueToTree(api);
 	}
 
-	public Stream<API> getAPI(final String service) {
-		return getAPI(service, null);
+	@Override
+	public Stream<API> all() {
+		return this.proxy.listAPIs(this.service).map(this::fromJson);
 	}
 
-	public Stream<API> getAPI(final String service, final String api) {
-		return this.proxy.getAPI(service, null).map(node -> this.fromJson(node));
+	@Override
+	public API get(final String api) {
+		return this.fromJson(this.proxy.getAPI(this.service, api));
 	}
 
-	public API createAPI(final String service, final API api) {
+	@Override
+	public API upsert(final API api) {
 		final JsonNode json = this.toJson(api);
-		return this.fromJson(this.proxy.createAPI(service, json));
+		return this.fromJson(this.proxy.upsertAPI(this.service, json));
 	}
 
-	public void deleteAPI(final String service, final API api) {
-		this.proxy.deleteAPI(service, api.getFunctionName());
+	@Override
+	public void delete(final API api) {
+		this.proxy.deleteAPI(this.service, api.getFunctionName());
 	}
 }

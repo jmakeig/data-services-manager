@@ -1,5 +1,5 @@
 {
-	"functionName": "createAPI",
+	"functionName": "upsertAPI",
 	"params": [
 		{
 			"name": "service",

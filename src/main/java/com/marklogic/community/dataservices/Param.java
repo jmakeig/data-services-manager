@@ -1,5 +1,7 @@
 package com.marklogic.community.dataservices;
 
+import java.util.Objects;
+
 public class Param extends Typed {
 	private String name;
 
@@ -24,6 +26,30 @@ public class Param extends Typed {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Param other = (Param) obj;
+		return Objects.equals(name, other.name);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(name);
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Param [name=").append(name).append("]");
+		return builder.toString();
 	}
 
 }
